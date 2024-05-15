@@ -1,0 +1,22 @@
+<?php
+$animals = ["Chat", "Chien", "Souris", "Lama"];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Exercice 3 echo</title>
+	</head>
+	<body>
+	    <ul>
+	        <?php 
+		foreach ($animals as $animal){ ?>
+		    <li>
+		        <?php echo $animal; ?>
+		    </li>
+		<?php } ?>
+	    </ul>
+		
+	</body>
+</html>

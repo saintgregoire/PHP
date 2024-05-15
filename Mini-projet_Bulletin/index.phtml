@@ -1,0 +1,84 @@
+<?php
+  $students = [
+	[
+		"firstName" => "James",
+		"lastName" => "Fields",
+		"grades" => [12, 11, 15],
+		"average" => -1
+	],
+	[
+		"firstName" => "Richard",
+		"lastName" => "Stein",
+		"grades" => [18, 12, 13],
+		"average" => -1
+	],
+	[
+		"firstName" => "Mark",
+		"lastName" => "Hartoff",
+		"grades" => [9, 11, 10],
+		"average" => -1
+	],
+	[
+		"firstName" => "Thomas",
+		"lastName" => "Nestle",
+		"grades" => [9, 8, 5],
+		"average" => -1
+	],
+	[
+		"firstName" => "Jeremy",
+		"lastName" => "Brent",
+		"grades" => [18, 15, 16],
+		"average" => -1
+	]
+];
+
+function moyenneNote(array $grades) : float {
+	$summ = 0;
+	for ($i = 0; $i < count($grades); $i++){
+		$summ += $grades[$i];
+	}
+	return $summ / count($grades);
+}
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <?php foreach($students as $student){ ?>
+            <article class="
+            <?php 
+            	if(moyenneNote($student["grades"]) < 10){
+                echo "red";
+                }
+                else if (moyenneNote($student["grades"]) > 13){
+                	echo "green";
+                }
+                else{
+                	echo "orange";
+                }
+                ?>">
+	            <header>
+		            <h1><?php echo $student["firstName"] . " " . $student["lastName"]; ?></h1>
+	            </header>
+	            <section>
+		            <h2>Notes : </h2>
+		            <ul>
+			            <li><?php echo $student["grades"][0] ?></li>
+			            <li><?php echo $student["grades"][1] ?></li>
+			            <li><?php echo $student["grades"][2] ?></li>
+		            </ul>
+	            </section>
+	            <footer>
+		            <h3><?php echo moyenneNote($student["grades"]) ?></h3>
+	            </footer>
+            </article>
+        <?php } ?>
+    </main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<?php
+  function generateLetters($count) {
+     $letters = "";
+     for($i = 0; $i < $count; $i++){
+         $randomAscii = mt_rand(65, 90);
+         $letters .= chr($randomAscii);
+     }
+     return $letters;
+  }
+  
+  function generateNumber($count, $from, $to) {
+      $numbers = "";
+      for ($i = 0; $i < $count; $i++){
+          $numbers .= mt_rand($from, $to);
+      }
+      
+     return $numbers;
+  }
+  
+  date_default_timezone_set('Europe/Paris');
+  
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Salut, humain. Je suis 
+    <?php $nameLetters = generateLetters(2);
+    echo $nameLetters; ?>-<?php 
+    $nameNumber = generateNumber(4, 0, 9);
+    echo $nameNumber; ?>.
+    </h1>
+    <p>Nous sommes le 
+    <?php echo date('d m Y') ?>
+    , il est 
+    <?php echo date('H:i:s') ?>.
+    </p>
+    <p>J'ai choisi le nombre 
+    <?php $randomNumber = generateNumber(1, 1, 10); 
+    echo $randomNumber; ?>. 
+    C'est un nombre 
+    <?php 
+    if($randomNumber % 2 === 0){ ?>
+     pair 
+     <?php }
+     else {
+         ?>
+         impair <?php
+     }
+    ?>.</p>
+    <p>Mon nom à l'envers s'écrit 
+    <?php 
+    $reverseName = strrev($nameLetters);
+    $reverseNumber = strrev($nameNumber);
+    echo $reverseNumber . "-" . $reverseName;
+    ?>
+    . Ah. Ah. Ah.
+    </p>
+    <p>
+        <?php 
+        $messageI = mt_rand(1,3);
+            if($messageI === 1 ){ ?>
+                Tu veux un cookie ?
+            <?php }
+            else { ?>
+                Voulez-vous une boisson chaude ?
+            <?php }
+        ?>
+    </p>
+    <p>
+        <?php  
+        $fibonacci = [];
+        $fibonacci[0] = 0;
+        $fibonacci[1] = 1;
+        
+        for ($i = 2; $i < 100; $i++){
+            $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
+        }
+        foreach ($fibonacci as $number){
+            echo $number . " ";
+        }
+        ?>
+    </p>
+</body>
+</html>

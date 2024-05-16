@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="POST"> 
+        <fieldset>
+            <label for="numberFirst">First number</label>
+            <input type="number" name="numberFirst" id="numberFirst"/>
+        </fieldset>
+        <fieldset>
+            <label for="operations">Operation</label>
+            <select name="operations" id="operations" size="5">
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="%">%</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="numberSecond">Second number</label>
+            <input type="number" name="numberSecond" id="numberSecond"/>
+        </fieldset>
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>

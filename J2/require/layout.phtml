@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Exercice require</title>
+        <link rel="stylesheet" href="assets/style.css" />
+    </head>
+    <body>
+        <?php
+          require "header.phtml";
+          if ($route !== null){
+              switch ($route){
+                    case "home":
+                      require "home.phtml";
+                      break;
+                    case "about":
+                      require "about.phtml";
+                      break;
+                    case "contact":
+                      require "contact.phtml";
+                      break;
+                    default: 
+                        require "home.phtml";
+              }
+          }
+          else{
+                  echo "Page not found";
+              }
+          require "footer.phtml";
+        ?>
+    </body>
+</html>

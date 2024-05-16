@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <title>CV</title>
+</head>
+<body class="<?= $color; ?>">
+    <header 
+    <?php 
+    if($color == "blue"){ ?>
+      class="bg_blue"
+    <?php } 
+    else if ($color == "red") { ?>
+      class="bg_red"
+    <?php }
+    ?>
+    >
+        <h1>
+            <?php
+              echo $nom . " " . $prenom;
+            ?>
+        </h1>
+        <p>Intitule du poste</p>
+    </header>
+    
+    <div class="wrapper_cv">
+        
+        <section class="information">
+            
+            <h2>INFORMATIONS</h2>
+            
+            <div class="contact">
+                <h3>Contact</h3>
+                <h4>Email</h4>
+                <p>
+                  <a target="_blank" href="mailto:<?php echo $email; ?>">
+                  <?php
+                    echo $email;
+                    ?>
+                  </a>
+                </p>
+                <h4>Telephone</h4>
+                <p>
+                  <a target="_blank" href="tel:<?php echo $tel; ?>">
+                    <?php
+                      echo $tel;
+                    ?>
+                  </a>
+                </p>
+                <h4>Linkedin</h4>
+                <p>
+                  <a target="_blank" href="<?php echo $linkedin; ?>">
+                    <?php
+                    echo $linkedin;
+                    ?>
+                  </a>
+                </p>
+                <h4>GitHub</h4>
+                <p>
+                  <a target="_blank" href="<?php echo $github; ?>">
+                    <?php
+                    echo $github;
+                    ?>
+                  </a>
+                </p>
+            </div>
+            
+            <div class="biographie">
+                <h3>Biographie</h3>
+                <p>
+                    <?php
+                    echo $bio;
+                    ?>
+                </p>
+            </div>
+            
+            <div class="loisirs">
+                <h3>Loisirs</h3>
+                    <ul>
+                        <?php
+                          if ($loisir1 !== null){
+                              ?> 
+                              <li>
+                                  <?php echo $loisir1; ?>
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($loisir2 !== null){
+                              ?> 
+                              <li>
+                                  <?php echo $loisir2; ?>
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($loisir3 !== null){
+                              ?> 
+                              <li>
+                                  <?php echo $loisir3; ?>
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($loisir4 !== null){
+                              ?> 
+                              <li>
+                                  <?php echo $loisir4; ?>
+                              </li>
+                          <?php }
+                        ?>
+                    </ul>
+            </div>
+            
+        </section>
+        
+        <section class="competences">
+            
+            <h2>Competences</h2>
+            
+            <div class="lang_prog">
+                <h3>Langages des programmation</h3>
+                    <ul>
+                        <?php
+                          if ($html !== null){
+                              ?> 
+                              <li>
+                                  HTML
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($css !== null){
+                              ?> 
+                              <li>
+                                  CSS
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($js !== null){
+                              ?> 
+                              <li>
+                                  JavaScript
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($php !== null){
+                              ?> 
+                              <li>
+                                  PHP
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($sql !== null){
+                              ?> 
+                              <li>
+                                  SQL
+                              </li>
+                          <?php }
+                        ?>
+                    </ul>
+            </div>
+            
+            <div class="frameworks_lib">
+                <h3>Frameworks & Librairies</h3>
+                    <ul>
+                        <?php
+                          if ($sass !== null){
+                              ?> 
+                              <li>
+                                  SASS
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($bootstrap !== null){
+                              ?> 
+                              <li>
+                                  Bootstrap
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($symfony !== null){
+                              ?> 
+                              <li>
+                                  Symfony
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($lavarel !== null){
+                              ?> 
+                              <li>
+                                  Lavarel
+                              </li>
+                          <?php }
+                        ?>
+                    </ul>
+            </div>
+            
+            <div class="logiciels">
+                <h3>Logiciels</h3>
+                    <ul>
+                        <?php
+                          if ($photoshop !== null){
+                              ?> 
+                              <li>
+                                  Photoshop
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($illustrator !== null){
+                              ?> 
+                              <li>
+                                  Illustrator
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($xd !== null){
+                              ?> 
+                              <li>
+                                  XD
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($figma !== null){
+                              ?> 
+                              <li>
+                                  Figma
+                              </li>
+                          <?php }
+                        ?>
+                    </ul>
+            </div>
+            
+            <div class="langues">
+                <h3>Langues</h3>
+                    <ul>
+                        <?php
+                          if ($fr !== null){
+                              ?> 
+                              <li>
+                                  Francais
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($an !== null){
+                              ?> 
+                              <li>
+                                  Anglais
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($ar !== null){
+                              ?> 
+                              <li>
+                                  Arabe
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($br !== null){
+                              ?> 
+                              <li>
+                                  Breton
+                              </li>
+                          <?php }
+                        ?>
+                        
+                        <?php
+                          if ($es !== null){
+                              ?> 
+                              <li>
+                                  Espagnol
+                              </li>
+                          <?php }
+                        ?>
+                    </ul>
+            </div>
+            
+        </section>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <title>Form</title>
+</head>
+<body>
+    <section>
+        <form action="index.php" method="POST" class="my_form">
+            <div class="wrapper">
+                <div class="first_block">
+                    <div class="info">
+                        <h2>INFORMATIONS</h2>
+                        
+                        <div class="field">
+                            <label for="nom">Nom</label>
+                                <input type="text" name="nom" id="nom" required/>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="prenom">Prenom</label>
+                                <input type="text" name="prenom" id="prenom" required/>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required/>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="tel">Telephone</label>
+                                <input type="tel" name="tel" id="tel" required/>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="linkedin">Linkedin</label>
+                                <input type="text" name="linkedin" id="linkedin" required/>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="github">GitHub</label>
+                                <input type="text" name="github" id="github" required/>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="bio">Biographie</label>
+                                <textarea name="bio" id="bio" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="loisir1">Loisir 1</label>
+                                <input type="text" name="loisir1" id="loisir1"/>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="loisir2">Loisir 2</label>
+                                <input type="text" name="loisir2" id="loisir2"/>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="loisir3">Loisir 3</label>
+                                <input type="text" name="loisir3" id="loisir3"/>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="loisir4">Loisir 4</label>
+                                <input type="text" name="loisir4" id="loisir4"/>
+                        </div>
+                    </div>
+                    
+                    <div class="lang">
+                        <h3>Langues</h3>
+                        
+                        <div>
+                            <input type="checkbox" id="fr" name="fr" />
+                            <label for="fr">Francais</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="an" name="an" />
+                            <label for="an">Anglais</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="ar" name="ar" />
+                            <label for="ar">Arabe</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="br" name="br" />
+                            <label for="br">Breton</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="es" name="es" />
+                            <label for="es">Espagnol</label>
+                        </div>
+                    </div>
+    
+                </div>
+                
+                <div class="second_block">
+                    
+                    <div class="competences">
+                    <h2>COMPETENCES</h2>
+                    
+                        <h3>Langages de Programmation</h3>
+                        
+                        <div>
+                            <input type="checkbox" id="html" name="html" />
+                            <label for="html">HTML</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="css" name="css" />
+                            <label for="css">CSS</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="js" name="js" />
+                            <label for="js">JavaScript</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="php" name="php" />
+                            <label for="php">PHP</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="sql" name="sql" />
+                            <label for="sql">SQL</label>
+                        </div>
+                    </div>
+                    
+                    <div class="frame_lib">
+                    
+                        <h3>Frameworks & Librairies</h3>
+                        
+                        <div>
+                            <input type="checkbox" id="sass" name="sass" />
+                            <label for="sass">Sass</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="bootstrap" name="bootstrap" />
+                            <label for="bootstrap">Bootstrap</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="symfony" name="symfony" />
+                            <label for="symfony">Symfony</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="lavarel" name="lavarel" />
+                            <label for="lavarel">Lavarel</label>
+                        </div>
+                        
+                        
+                        <h3>Logiciels</h3>
+                        
+                        <div>
+                            <input type="checkbox" id="photoshop" name="photoshop" />
+                            <label for="photoshop">Photoshop</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="illustrator" name="illustrator" />
+                            <label for="illustrator">Illustrator</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="xd" name="xd" />
+                            <label for="xd">XD</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="figma" name="figma" />
+                            <label for="figma">Figma</label>
+                        </div>
+                    </div>
+                    
+                    <div class="color">
+                    <h3>Couleur du CV</h3>
+                    
+                        <label for="operations">Couleur</label>
+                            <select name="operations" id="operations" required>
+                                <option value="blue">Blue</option>
+                                <option value="red">Red</option>
+                            </select>
+                        </div>
+                    
+                </div>
+            
+            </div>
+            
+            <button type="submit">ENVOYER</button>
+        </form>
+    </section>
+</body>
+</html>

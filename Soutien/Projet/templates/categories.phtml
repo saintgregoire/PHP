@@ -1,0 +1,232 @@
+<main id="home" class="p-3">
+    <h1 class="text-center m-5">
+        <?php
+            switch ($category){
+                case 'design':
+                    echo "Design";
+                    break;
+                case 'development':
+                    echo 'Development';
+                    break;
+                case 'accessibility':
+                    echo 'Accessibility';
+                    break;
+            }
+        ?>
+    </h1>
+        <ul class="row p-0">
+            <li class="col-4 my-3">
+                <article class="card">
+                    <header class="card-header p-0">
+                        <img src="https://picsum.photos/id/1/550/250" class="card-img-top" alt="" />
+                        <h3 class="card-title px-2 py-3">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[0]['title'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[0]['title'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[0]['title'];
+                                        break;
+                                }
+                            ?>
+                        </h3>
+                    </header>
+                    <section class="card-body p-2">
+                        <p class="card-text">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[0]['excerpt'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[0]['excerpt'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[0]['excerpt'];
+                                        break;
+                                }
+                            ?>
+                        </p>
+                    </section>
+                    <footer class="p-2">
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </footer>
+                </article>
+            </li>
+            <li class="col-4 my-3">
+                <article class="card">
+                    <header class="card-header p-0">
+                        <img src="https://picsum.photos/id/13/550/250" class="card-img-top" alt="" />
+                        <h3 class="card-title px-2 py-3">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[1]['title'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[1]['title'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[1]['title'];
+                                        break;
+                                }
+                            ?>
+                        </h3>
+                    </header>
+                    <section class="card-body p-2">
+                        <p class="card-text">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[1]['excerpt'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[1]['excerpt'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[1]['excerpt'];
+                                        break;
+                                }
+                            ?>
+                        </p>
+                    </section>
+                    <footer class="p-2">
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </footer>
+                </article>
+            </li>
+            <li class="col-4 my-3">
+                <article class="card">
+                    <header class="card-header p-0">
+                        <img src="https://picsum.photos/id/24/550/250" class="card-img-top" alt="" />
+                        <h3 class="card-title px-2 py-3">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[2]['title'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[2]['title'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[2]['title'];
+                                        break;
+                                }
+                            ?>
+                        </h3>
+                    </header>
+                    <section class="card-body p-2">
+                        <p class="card-text">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[2]['excerpt'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[2]['excerpt'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[2]['excerpt'];
+                                        break;
+                                }
+                            ?>
+                        </p>
+                    </section>
+                    <footer class="p-2">
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </footer>
+                </article>
+            </li>
+            <li class="col-4 my-3">
+                <article class="card">
+                    <header class="card-header p-0">
+                        <img src="https://picsum.photos/id/36/550/250" class="card-img-top" alt="" />
+                        <h3 class="card-title px-2 py-3">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[3]['title'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[3]['title'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[3]['title'];
+                                        break;
+                                }
+                            ?>
+                        </h3>
+                    </header>
+                    <section class="card-body p-2">
+                        <p class="card-text">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[3]['excerpt'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[3]['excerpt'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[3]['excerpt'];
+                                        break;
+                                }
+                            ?>
+                        </p>
+                    </section>
+                    <footer class="p-2">
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </footer>
+                </article>
+            </li>
+            <li class="col-4 my-3">
+                <article class="card">
+                    <header class="card-header p-0">
+                        <img src="https://picsum.photos/id/42/550/250" class="card-img-top" alt="" />
+                        <h3 class="card-title px-2 py-3">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[4]['title'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[4]['title'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[4]['title'];
+                                        break;
+                                }
+                            ?>
+                        </h3>
+                    </header>
+                    <section class="card-body p-2">
+                        <p class="card-text">
+                            <?php
+                                switch ($category){
+                                    case 'design':
+                                        echo $design[4]['excerpt'];
+                                        break;
+                                    case 'development':
+                                        echo $dev[4]['excerpt'];
+                                        break;
+                                    case 'accessibility':
+                                        echo $accessibility[4]['excerpt'];
+                                        break;
+                                }
+                            ?>
+                        </p>
+                    </section>
+                    <footer class="p-2">
+                        <a href="#" class="btn btn-primary">Lire l'article</a>
+                    </footer>
+                </article>
+            </li>
+        </ul>
+</main>
+
+
+

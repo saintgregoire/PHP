@@ -1,0 +1,10 @@
+<?php
+
+if(isset($_SESSION["user"]))
+{
+    echo "<h1>Bonjour {$_SESSION['user']['first_name']} {$_SESSION['user']['last_name']}</h1>";
+}
+else
+{
+    echo "<h1>Bonjour invité-e</h1>";
+}

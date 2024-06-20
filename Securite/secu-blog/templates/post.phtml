@@ -1,0 +1,19 @@
+<?php
+
+    $author = $_SESSION['post']->getAuthor();
+    $authorName = $author->getUsername();
+    $title = $_SESSION['post']->getTitle();
+    $excerpt = $_SESSION['post']->getExcerpt();
+    $content = $_SESSION['post']->getContent();
+    $date = $_SESSION['post']->getCreated();
+    
+?>
+
+   <div class='container'>
+       <h1 class='post_title'><?=$title?></h1>
+        <p class='post_excerpt'><?=$excerpt?></p>
+        <p class='post_content'><?=$content?></p>
+        <p class='post_author'><?=$authorName?></p>
+        <p class='post_date'><?=$date?></p>
+    </div>
+

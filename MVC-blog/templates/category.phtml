@@ -1,0 +1,13 @@
+<h1>
+    <?php echo $title;  ?>
+</h1>
+<p>
+    <?php  echo $description; ?>
+</p>
+
+<ul>
+    <?php
+    $post = new PostManager();
+    $post->showPostName($id);
+    ?>
+</ul>

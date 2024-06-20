@@ -1,0 +1,15 @@
+html {
+    font-size:18px;
+}
+
+body {
+    min-height:100vh;
+    display:grid;
+}
+
+body > ul {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    column-gap:2rem;
+    row-gap:3rem;
+}

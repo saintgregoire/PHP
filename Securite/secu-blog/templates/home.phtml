@@ -1,0 +1,28 @@
+<main id="home" class="py-5 px-3">
+    <h1 class="mb-5">Secured Blog</h1>
+
+    <h2 class="mt-5">Latest posts</h2>
+    <ul class="row mt-5">
+        <?php
+        $postManager = new PostManager();
+        $latestPosts = $postManager->findLatest();
+        
+        
+        foreach($latestPosts as $post){
+            echo "<li class='col-4 my-2'>
+            <article class='card'>
+                <header class='card-body'>
+                    <h3 class='h5 card-title'>{$post->getTitle()}</h3>
+                    <h4 class='h6 card-subtitle mb-2 text-body-secondary'>{$postManager->findPostCategory($post->getId())}</h4>
+                </header>
+                <section class='card-body'>
+                    <p class='card-text'>{$post->getExcerpt()}</p>
+                    <a href='index.php?route=post&post_id={$post->getId()}' class='btn btn-primary'>Post Link</a>
+                </section>
+            </article>
+        </li>";
+        }
+        ?>
+        
+    </ul>
+</main>

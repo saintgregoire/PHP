@@ -1,0 +1,30 @@
+<?php 
+    $postManager = new PostManager();
+    $categoryId = $_SESSION['category']->getId();
+    $posts = $postManager->findByCategory($categoryId);
+?>
+
+<main id="category" class="py-5 px-3">
+    <h1 class="mb-5">Secured Blog</h1>
+
+    <h2 class="mt-5"><?= $_SESSION['category']->getTitle() ?></h2>
+    <ul class="row mt-5">
+        <?php
+            foreach($posts as $item){
+                echo "<li class='col-4 my-2'>
+            <article class='card'>
+                <header class='card-body'>
+                    <h3 class='h5 card-title'>{$item->getTitle()}</h3>
+                </header>
+                <section class='card-body'>
+                    <p class='card-text'>{$item->getExcerpt()}</p>
+                    <a href='index.php?route=post&post_id={$item->getId()}' class='btn btn-primary'>Post Link</a>
+                </section>
+            </article>
+        </li>";
+            }
+        
+        ?>
+        
+    </ul>
+</main>
